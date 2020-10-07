@@ -1,0 +1,25 @@
+
+h1 {
+    font-size: 64px;
+
+    @media screen and (max-width: 1279.98px) {
+        font-size: 6vw;
+    }
+
+    // @media screen and (max-width: 479.98px) {
+        
+    // }
+}
+h2 {
+    font-size: 48px;
+}
+h3 {
+    font-size: 36px;
+}
+h4 {
+    font-size: 24px;
+}
+h5 {
+    font-size: 18px;
+}
+

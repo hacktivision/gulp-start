@@ -1,0 +1,18 @@
+.navbar {
+	$this: &;
+
+	&__nav {
+	}
+
+	&__item {
+		&:not(:last-child) {
+		}
+	}
+
+	a,
+	&__link {
+		#{$this}__item:hover & {
+		}
+	}
+}
+

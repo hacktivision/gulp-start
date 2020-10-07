@@ -1,0 +1,28 @@
+// Media
+@mixin respond-to($breakpoint) {
+	
+	$raw-query: map-get($breakpoints, $breakpoint);
+
+	@if $raw-query {
+
+		$query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query));
+
+		@media #{$query} {
+			@content;
+		}
+	} @else {
+		@error 'Не указано значение для `#{$breakpoint}`. ' + 'Пожалуйста, убедитесь, что точка останова объявлена в карте `$breakpoints`.';
+	}
+}
+
+
+// Fonts
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}

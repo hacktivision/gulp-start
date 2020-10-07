@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+html, body {
+   font-family: $base-font;
+   font-size: 106.25%;
+   line-height: 1.6;
+
+   // @media screen and (max-width: 999.98px) {
+   //    font-size: 100%;
+   // }
+
+   // @media screen and (max-width: 767.98px) {
+   //    font-size: 93.25%;
+   // }
+
+   @media screen and (max-width: 1279.98px) {
+      font-size: calc(15px + 3 * ((100vw - 480px) / (1280 - 480)));
+  }
+}
